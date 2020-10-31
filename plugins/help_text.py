@@ -71,13 +71,8 @@ async def start(bot, update):
             [
                 [
                     InlineKeyboardButton('Support Channel', url='https://t.me/kc_bots'),
-                    InlineKeyboardButton('Feedback', url='https://t.me/kc_bots')
+                    InlineKeyboardButton('Other bots', url='https://t.me/kc_bots/2')
                 ],
-                [
-                    InlineKeyboardButton('Other Bots', url='https://t.me/kc_bots/2'),
-                    InlineKeyboardButton('Source', url='Not Available')
-                ]
-            ]
         ),
         reply_to_message_id=update.message_id
     )
