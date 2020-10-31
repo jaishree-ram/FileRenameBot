@@ -68,11 +68,6 @@ async def start(bot, update):
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(update.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/kc_bots'),
-                    InlineKeyboardButton('Other bots', url='https://t.me/kc_bots/2')
-                ],
         ),
         reply_to_message_id=update.message_id
     )
