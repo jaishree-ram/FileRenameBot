@@ -67,6 +67,20 @@ async def start(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(update.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('Support Channel', url='https://t.me/Mai_bOTs'),
+                    InlineKeyboardButton('Feedback', url='https://t.me/No_OnE_Kn0wS_Me')
+                ],
+                [
+                    InlineKeyboardButton('Other Bots', url='https://t.me/Mai_bOTs/17'),
+                    InlineKeyboardButton('Source', url='https://github.com/No-OnE-Kn0wS-Me/FileRenameBot')
+                ]
+            ]
+        ),
+        reply_to_message_id=update.message_id
+    )
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
